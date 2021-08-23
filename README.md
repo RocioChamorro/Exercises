@@ -1,5 +1,4 @@
 # JS / Several solved exercises
-​
 1. Crear una función que reciba un objeto y un string…
 El string va a ser el nombre de una propiedad, y 
 esa función tiene que validar si existe esa propiedad dentro del objeto que le mandes
