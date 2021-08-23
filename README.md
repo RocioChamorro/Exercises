@@ -33,7 +33,22 @@ let myObject = {
 It supposed to be filled using it's own function
 Add any type of element on the object.. arrays, objects, int, strings, etc
   ```js
+let myObject = {
+    myFunction: function (prop, _value){
+        Object.defineProperty(this, prop,  {
+            value: _value,
+            enumerable: true
+          })
+    }
+}
 
+console.log(myObject.myFunction('name','Rocio'));
+console.log(myObject);
+
+Object.freeze(myObject); //impide que se le agreguen nuevas propiedades,..etc.
+
+console.log(myObject.myFunction('lastname','Chamorro'));
+console.log(myObject); //Cannot define property lastname, object is not extensible
   ```
 3. var simpleExercise = [{a: 11, b:224, name: "M48 Bulldog"}, {a:23, b:56, name: "Object 140"}, {a: 32, b:75, name: "T57 Heavy"}];
 Hacer una función para que reciba ese arreglo de objetos
