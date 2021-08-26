@@ -114,3 +114,55 @@ let bank_balance = prompt("Ingrese el saldo de su cuenta bancaria en $");
 validatePurchase(bank_balance);
 
   ```
+4.  Classes were added in last version of JavaScript (called ECMAScript 6 or just ES6). It's something similar to how classes work in other languages (Java, Ruby, etc). This is a 	very important concept in programming, so sooner or later you'll want to learn about it. (And I highly recommend you to do it before the Java modules).
+
+
+Create a  Car class:
+
+1) Add properties like model, so you can create a "Ford" with model "Mondeo". Add the properties you like in the constructor method.
+2) Add a method to accelerate
+3) Add a method to stop
+4) Add a method turn directions
+5) Add a method call status to display the information of the car (properties, methods, etc)
+
+Instance at least 2.
+  ```js
+  let Car = class Ford {
+    constructor(age, vi, a) {
+        this.modelo = "Mondeo";
+        this.tipo = "Automóvil de turismo";
+        this.período = `${age}-presente`;
+        this.vi = vi;
+        this.a = a;
+    }
+
+    speedup() {
+        const t = 1.2;
+        let vf = this.a * t + this.vi
+        return `Para acelerara su velocidad final tiene que ser de: ${vf}`;
+    }
+
+    stop() {
+        let d = Math.pow(this.vi, 2) / 180
+        return `Tendrías que tener una distancia de ${d} para frenar`;
+    }
+
+    // direction() {
+    //     : mecánica, hidráulica y eléctrica.
+    // }
+
+    properties() {
+        this.accelerationSpeed = this.speedup();
+        this.stopDistance = this.stop();
+        return this;
+    }
+}
+
+const auto1 = new Car(2015,75,15)
+console.log(auto1.properties())
+
+const auto2 = new Car(2019,90,30)
+console.log(auto2.properties())
+
+  ```
+
