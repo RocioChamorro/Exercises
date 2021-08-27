@@ -138,12 +138,14 @@ Instance at least 2.
 
     speedup() {
         const t = 1.2;
-        let vf = this.a * t + this.vi
-        return `Para acelerara su velocidad final tiene que ser de: ${vf}`;
+        let vf = this.a * t + this.vi;
+	this.accelerationSpeed = vf;
+        return `Para acelerar su velocidad final tiene que ser de: ${vf}`;
     }
 
     stop() {
         let d = Math.pow(this.vi, 2) / 180
+	this.stopDistance = d;
         return `Tendrías que tener una distancia de ${d} para frenar`;
     }
 
@@ -152,8 +154,6 @@ Instance at least 2.
     // }
 
     properties() {
-        this.accelerationSpeed = this.speedup();
-        this.stopDistance = this.stop();
         return this;
     }
 }
