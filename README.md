@@ -131,7 +131,7 @@ Instance at least 2.
     constructor(age, vi, a) {
         this.modelo = "Mondeo";
         this.tipo = "Automóvil de turismo";
-        this.período = `${age}-presente`;
+        this.periodo = `${age}-presente`;
         this.vi = vi;
         this.a = a;
     }
@@ -154,6 +154,8 @@ Instance at least 2.
     // }
 
     properties() {
+    	this.speedup = this.speedup;
+        this.stop = this.stop;
         return this;
     }
 }
