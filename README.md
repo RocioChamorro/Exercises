@@ -127,44 +127,20 @@ Create a  Car class:
 
 Instance at least 2.
   ```js
-  let Car = class Ford {
-    constructor(age, vi, a) {
-        this.modelo = "Mondeo";
-        this.tipo = "Automóvil de turismo";
-        this.periodo = `${age}-presente`;
-        this.vi = vi;
-        this.a = a;
+function palindrome(string) {
+    let account = 0;
+    let text = string.replace(/\s+/g, ''); //texto.split(" ").join("");
+    text = text.toLowerCase();
+    for (let i = text.length - 1; i < text.length; i--) {
+        const letter = text[i];
+        if (i > text.length / 2) {
+            if (text[account]!= letter) return console.log("No es una palabra palíndromoi");
+            account++;
+        }
+        else break;
     }
-
-    speedup() {
-        const t = 1.2;
-        let vf = this.a * t + this.vi;
-	this.accelerationSpeed = vf;
-        return `Para acelerar su velocidad final tiene que ser de: ${vf}`;
-    }
-
-    stop() {
-        let d = Math.pow(this.vi, 2) / 180
-	this.stopDistance = d;
-        return `Tendrías que tener una distancia de ${d} para frenar`;
-    }
-
-    // direction() {
-    //     : mecánica, hidráulica y eléctrica.
-    // }
-
-    properties() {
-    	this.speedup = this.speedup;
-        this.stop = this.stop;
-        return this;
-    }
+    return console.log("Es una palabra palíndromo");
 }
 
-const auto1 = new Car(2015,75,15)
-console.log(auto1.properties())
-
-const auto2 = new Car(2019,90,30)
-console.log(auto2.properties())
-
+palindrome('Yo hago yoga hoy');// return "Es una palabra palíndromo"
   ```
-
